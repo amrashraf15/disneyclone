@@ -23,22 +23,22 @@ function MovieList({ genreId, index_ }: MovieListProps) {
     const elementRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        getMovieByGenreId(); // ✅ No need for fetchData()
-    }, [genreId]);
-
-    const getMovieByGenreId = async () => {
-        try {
-            const resp = await api.getMovieByGenreId(genreId);
-            console.log("Fetched data:", resp); // ✅ Debugging line
-            if (!resp || !resp.results) {
-                console.warn("No results found in response", resp);
-                return;
+        const getMovieByGenreId = async () => {
+            try {
+                const resp = await api.getMovieByGenreId(genreId);
+                console.log("Fetched data:", resp);
+                if (!resp || !resp.results) {
+                    console.warn("No results found in response", resp);
+                    return;
+                }
+                setMovieList(resp.results);
+            } catch (error) {
+                console.error("Failed to fetch movies:", error);
             }
-            setMovieList(resp.results);
-        } catch (error) {
-            console.error("Failed to fetch movies:", error);
-        }
-    };
+        };
+
+        getMovieByGenreId();
+    }, [genreId]);
 
     const sliderRight = () => {
         elementRef.current?.scrollBy({ left: 500, behavior: "smooth" });
@@ -59,9 +59,9 @@ function MovieList({ genreId, index_ }: MovieListProps) {
             <div ref={elementRef} className="flex overflow-x-auto gap-8 scrollbar-hidden scroll-smooth pt-4 px-3 pb-4">
                 {movieList.map((item) =>
                     index_ % 3 === 0 ? (
-                        <HrMovieCard key={item.id} movie={item} /> // ✅ Added `key={item.id}`
+                        <HrMovieCard key={item.id} movie={item} />
                     ) : (
-                        <MovieCard key={item.id} movie={item} /> // ✅ Added `key={item.id}`
+                        <MovieCard key={item.id} movie={item} />
                     )
                 )}
             </div>

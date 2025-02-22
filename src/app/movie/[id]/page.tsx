@@ -34,12 +34,18 @@ const MoviePage = ({ params }: MovieDetailsProps) => {
 
     useEffect(() => {
         const fetchMovie = async () => {
-            const data = await api.getMovieById(Number(params.id));
-            setMovie(data);
+            try {
+                const data = await api.getMovieById(Number(params.id));
+                setMovie(data);
 
-            // Check if movie is in watchlist
-            const watchlist = JSON.parse(localStorage.getItem("watchlist") || "[]");
-            setIsInWatchlist(watchlist.some((item: Movie) => item.id === data.id));
+                // Check if movie is in watchlist
+                const watchlist = JSON.parse(localStorage.getItem("watchlist") || "[]");
+                setIsInWatchlist(watchlist.some((item: Movie) => item.id === data.id));
+            } catch (error) {
+                console.error("Error fetching movie:", error);
+                setMovie(null); // Set movie to null on error
+            }
+
         };
 
         fetchMovie();
@@ -114,4 +120,3 @@ const MoviePage = ({ params }: MovieDetailsProps) => {
 };
 
 export default MoviePage;
-
