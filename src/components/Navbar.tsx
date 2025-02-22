@@ -2,7 +2,7 @@
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import { HiHome, HiStar, HiPlus } from "react-icons/hi";
+import { HiHome, HiPlus } from "react-icons/hi";
 import { HiMagnifyingGlass, HiPlayCircle, HiTv } from "react-icons/hi2";
 import React from "react";
 import Link from "next/link";
@@ -14,9 +14,8 @@ const Navbar = () => {
         {id:1,title:"Home",icon:HiHome,href:"/"},
         {id:2,title:"Search",icon:HiMagnifyingGlass,href:""},
         {id:3,title:"watch list",icon:HiPlus,href:"/watchlist"},
-        {id:4,title:"originals",icon:HiStar,href:""},
-        {id:5,title:"movies",icon:HiPlayCircle,href:""},
-        {id:6,title:"series",icon:HiTv,href:""},
+        {id:4,title:"movies",icon:HiPlayCircle,href:"/movie"},
+        {id:5,title:"series",icon:HiTv,href:"/series"},
     ]
     const [open, setOpen] = useState(false);
     return (
