@@ -50,10 +50,26 @@ The project fetches real-time movie and series data using the TMDB API, offering
 - ![TMDB API](https://img.shields.io/badge/TMDB_API-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white)
 
 ---
+## ⚙️ Installation
 
-
-
-
+### 1. Clone the Repository  
+### 1. Clone the Repository
+   ```sh
+   git clone https://github.com/your-username/disney-clone.git
+   cd disney-clone
+   ```
+2. Install dependencies:
+   ```sh
+    npm install
+   ```
+3. Set up environment variables:
+  ```sh
+     NEXT_PUBLIC_TMDB_API_KEY=your_tmdb_api_key
+   ```
+4.Run the development server:
+  ```sh
+     npm run dev
+   ```
 
 ---
 
