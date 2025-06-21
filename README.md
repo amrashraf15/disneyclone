@@ -60,7 +60,7 @@ The project fetches real-time movie and series data using the TMDB API, offering
    ```
 2. Install dependencies:
    ```sh
-    npm install
+   npm install
    ```
 3. Set up environment variables:
   ```sh
