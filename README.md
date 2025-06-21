@@ -1,6 +1,13 @@
 # 🎬 Disney+ Clone
 A full-featured streaming platform clone built with Next.js, React, Tailwind CSS, and TypeScript, leveraging the TMDB API for fetching movies and series data. The application includes individual pages for movies, TV series, detailed views for each title, and a personal watchlist.
 
+<p align="center">
+  <img src="public/Home.png" alt="Home" width="30%" height="30%" />
+  <img src="public/movie.png" alt="Image 2" width="30%" height="30%" />
+  <img src="public/watchlist.png" alt="Image 3" width="30%" height="30%" />
+</p>
+
+
 ---
 ## 📋 Table of Contents
 - [Overview](#-overview)
