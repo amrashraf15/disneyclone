@@ -19,6 +19,19 @@ The Disney+ Clone is a visually rich and responsive streaming platform that repl
 
 The project fetches real-time movie and series data using the TMDB API, offering a dynamic browsing experience. Designed with scalability and performance in mind, this clone provides a smooth user interface, seamless navigation, and mobile-first responsiveness.
 
+
+---
+## ✨ Features
+
+- 🎬 **Movies & Series Pages**: Browse trending movies and popular TV shows  
+- 📄 **Detail Pages**: View detailed information about each title including synopsis, ratings, and posters  
+- ⭐ **Watchlist Functionality**: Add or remove your favorite titles to a personal watchlist  
+- 🌐 **TMDB API Integration**: Fetches real-time content from The Movie Database  
+- 🎨 **Responsive UI**: Built with Tailwind CSS for a mobile-first, responsive design  
+- ⚛️ **Component-Based Architecture**: Reusable and modular components powered by React and TypeScript  
+- 🚀 **Next.js Routing**: Optimized routing and performance using Next.js  
+
+
 ---
 ## 🧩 Core Pages
 - 🎬 Movies Page – Browse popular and trending movies
